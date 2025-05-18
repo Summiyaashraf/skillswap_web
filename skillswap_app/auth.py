@@ -1,4 +1,3 @@
-# auth.py
 import sqlite3
 import bcrypt
 
@@ -29,7 +28,6 @@ def login_user(username, password):
     if result:
         stored_hashed_password = result[0]
 
-        # Agar stored password string hai toh usay bytes mein convert karo
         if isinstance(stored_hashed_password, str):
             stored_hashed_password = stored_hashed_password.encode('utf-8')
 
